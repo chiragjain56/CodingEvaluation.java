@@ -1,4 +1,4 @@
-package com.thezolooo;
+package com.thezolooo.q1;
 
 abstract class Classone implements InterfaceThree{
     @Override

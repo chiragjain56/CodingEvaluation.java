@@ -1,4 +1,4 @@
-package com.thezolooo;
+package com.thezolooo.q1;
 
  interface InterfaceOne {
     void methodOne();
