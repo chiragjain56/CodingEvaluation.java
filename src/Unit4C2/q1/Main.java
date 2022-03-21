@@ -1,4 +1,4 @@
-package com.thezolooo.q1;
+package Unit4C2.q1;
 
 
 public class Main {

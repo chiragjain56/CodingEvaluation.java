@@ -1,4 +1,4 @@
-package com.thezolooo.q2;
+package Unit4C2.q2;
 import java.lang.*;
 import java.util.*;
 
