@@ -6,6 +6,7 @@ public class Main {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
         Employee employee = new Employee("chi56","Chirag","Udaipur","chirag@56");
 
+        //Serializing except Password
         FileOutputStream fileOutputStream = new FileOutputStream("emp.txt");
         ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
         objectOutputStream.writeObject(employee);
