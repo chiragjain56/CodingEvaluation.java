@@ -1,0 +1,14 @@
+DeadLock: when multiple thread in java waiting for each other to release  an object lock which is got by each other thread,
+this is called deadlock.
+
+It occurs in various application like:
+1.Web Browsers :-A web browsers can download number of files and web pages at same time and still lets you continue browsing;
+if one of pages not downloading it can not stop to browser to do other things.
+
+2 Bank Transaction :- it help to deposits and withdrawing money at a time.
+
+3 Text Editors :- When are typing in an editor,spell checking,formatting saving the text are done concurrently by multiple threads
+
+4 Intellij:- it run multiple threads at same time.you just write sort word and it shows things you needed
+
+5
