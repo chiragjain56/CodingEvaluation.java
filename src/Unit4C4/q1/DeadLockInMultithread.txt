@@ -11,4 +11,4 @@ if one of pages not downloading it can not stop to browser to do other things.
 
 4 Intellij:- it run multiple threads at same time.you just write sort word and it shows things you needed
 
-5
+5 Computer Games :- playing background music,at the same time showing different objects.
