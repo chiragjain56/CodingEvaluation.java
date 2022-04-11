@@ -1,0 +1,19 @@
+Q2.What is the 3NF? Explain with an example. You don’t need to draw the
+   tables or write the queries. Just mention the schema before and after the
+   third normal form.
+
+Ans: 3nf contains any transitive partial dependency. it is used to reduce data . for 3nf data must be in 2nf.
+there is no transitive dependency for non-prime attributes.
+
+eg: if an employee table have all the attribute(emp_id,emp_name,emp_city,emp_state,emp_zip)
+then candidate key is emp_id;
+and all attribute except emp_id are non_prime.
+here emp state and emp city depend on emp zip which is depend on emp_id.so we can clearly see that (emp_state,emp_city)
+dependent on super key emp_id.it violets the rule so we divide it into two tables;
+
+a-->b-->c
+where 1st table contains
+empid,empname,empzip  //a-->b
+
+2nd table contains
+empzip,empstate,empcity  //b-->c
