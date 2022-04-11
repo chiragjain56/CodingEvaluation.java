@@ -38,4 +38,6 @@ mysql> select * from Person;
 +----------+-----------+----------+
 2 rows in set (0.00 sec)
 
+
+
 mysql>select persons.firstName, persons.lastName, address.city, address.state from persons left join address on persons.personId=address.personId;
