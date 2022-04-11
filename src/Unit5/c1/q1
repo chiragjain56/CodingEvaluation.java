@@ -1,0 +1,180 @@
+Enter password: **********
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 20
+Server version: 8.0.28 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2022, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| db1                |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.08 sec)
+
+mysql> create database chiragdb;
+Query OK, 1 row affected (0.03 sec)
+
+mysql> use chiragdb;
+Database changed
+mysql> create table Students();
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+mysql> create table Students(ID int,Name varchar(10);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> create table Students(ID int,Name varchar(10));
+Query OK, 0 rows affected (0.13 sec)
+
+mysql> create table Friends(ID int,Friend_ID int));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+mysql> create table Friends(ID int,Friend_ID int);
+Query OK, 0 rows affected (0.07 sec)
+
+mysql> create table Packages(ID int,Salary int);
+Query OK, 0 rows affected (0.07 sec)
+
+mysql> show tables;
++--------------------+
+| Tables_in_chiragdb |
++--------------------+
+| friends            |
+| packages           |
+| students           |
++--------------------+
+3 rows in set (0.01 sec)
+
+mysql> insert into friends values(1,2);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into friends values(2,3);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into friends values(3,4);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into friends values(4,1);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from friends;
++------+-----------+
+| ID   | Friend_ID |
++------+-----------+
+|    1 |         2 |
+|    2 |         3 |
+|    3 |         4 |
+|    4 |         1 |
++------+-----------+
+4 rows in set (0.00 sec)
+
+mysql> insert into students values(1,"Ashley");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into students values(1,"Samantha");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into students values(1,"Julia");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> delete from students where Name = Samantha;
+ERROR 1054 (42S22): Unknown column 'Samantha' in 'where clause'
+mysql> delete from students where Name = "Samantha";
+Query OK, 1 row affected (0.00 sec)
+
+mysql> delete from students where Name = "Julia";
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from students;
++------+--------+
+| ID   | Name   |
++------+--------+
+|    1 | Ashley |
++------+--------+
+1 row in set (0.00 sec)
+
+mysql> insert into students values(2,"Samantha");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into students values(3,"Julia");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into students values(3,"Scarlet");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from students;
++------+----------+
+| ID   | Name     |
++------+----------+
+|    1 | Ashley   |
+|    2 | Samantha |
+|    3 | Julia    |
+|    3 | Scarlet  |
++------+----------+
+4 rows in set (0.00 sec)
+
+mysql> delete table packages;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'table packages' at line 1
+mysql> delete packages;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> drop packages;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'packages' at line 1
+mysql> delete table packages;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'table packages' at line 1
+mysql> drop table packages;
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> show tables;
++--------------------+
+| Tables_in_chiragdb |
++--------------------+
+| friends            |
+| students           |
++--------------------+
+2 rows in set (0.00 sec)
+
+mysql> create table packages(ID int,Salary float);
+Query OK, 0 rows affected (0.08 sec)
+
+mysql> show tables;
++--------------------+
+| Tables_in_chiragdb |
++--------------------+
+| friends            |
+| packages           |
+| students           |
++--------------------+
+3 rows in set (0.00 sec)
+
+mysql> insert into packages values(1,15.20);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into packages values(2,10.06);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into packages values(3,11.55);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into packages values(4,12.12);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from packages;
++------+--------+
+| ID   | Salary |
++------+--------+
+|    1 |   15.2 |
+|    2 |  10.06 |
+|    3 |  11.55 |
+|    4 |  12.12 |
++------+--------+
+4 rows in set (0.00 sec)
+
+mysql>

@@ -11,9 +11,9 @@ and all attribute except emp_id are non_prime.
 here emp state and emp city depend on emp zip which is depend on emp_id.so we can clearly see that (emp_state,emp_city)
 dependent on super key emp_id.it violets the rule so we divide it into two tables;
 
-a-->b-->c
-where 1st table contains
-empid,empname,empzip  //a-->b
+before:
+employee{id primary key,name,address};
 
-2nd table contains
-empzip,empstate,empcity  //b-->c
+after:
+employee{id primary key,name,address};
+address{ pincode primary key ,city,state};

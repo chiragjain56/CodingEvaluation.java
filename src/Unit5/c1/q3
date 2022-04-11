@@ -1,0 +1,12 @@
+Q3.Briefly explain what a transaction is along with the ACID properties.
+Ans:To maintain the integrity of the data,there are four properties described in dbms,which are known as the ACID properties.
+the full form of ACID is
+--Atomicity:
+          data remains single or atomic.if any operation performed on the data,either it should be performed or should not performed at all.
+
+--Consistency:
+             The databases remains n a consistent state after any transaction;
+--Isolation:
+            A transaction can not effect another transaction ,it is isololated;
+--Durabilty:
+            History of a  transaction must be preserved;
