@@ -1,0 +1,4 @@
+
+Ans: its says that parent class will always be substitute of child class.
+eg: if A is substitute of B,then A will always be replace  with B.
+if its violets the law we will create seperate interface and apply it.
