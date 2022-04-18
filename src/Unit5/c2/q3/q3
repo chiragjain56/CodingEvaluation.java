@@ -1,0 +1,3 @@
+Ans: Interface Segregation principle in SOLID IS violated.
+        It states that classes should not include the behaviours or methods
+        it does not use.
