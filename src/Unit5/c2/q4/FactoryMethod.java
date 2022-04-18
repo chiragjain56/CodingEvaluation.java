@@ -1,20 +1,27 @@
 package Unit5.c2.q4;
 
-public class FactoryMethod {
-    public static void main(String[] args) {
-   Paper paper = MyPaperfactory.createPaper(Country.s1);
-        System.out.println(paper.getDifferentSize());
-    }
-}
+import java.util.Scanner;
 
-class MyPaperfactory{
-    public static Paper createPaper(Country country){
-        switch (country){
-            case s1:return new small();
-            case s2: return new medium();
-            case s3 : return new large();
+public class BankNotePress {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int paisa = sc.nextInt();
+
+        if(paisa==10){
+            Paper paper = new small();
+            System.out.println(paper.getDifferentSize());
         }
-     return null;
+        else if(paisa ==100){
+            Paper paper = new medium();
+            System.out.println(paper.getDifferentSize());
+        }
+        else if(paisa == 1000){
+            Paper paper = new large();
+            System.out.println(paper.getDifferentSize());
+        }
+        else{
+            System.out.println("Invalid Number");
+        }
     }
 }
 
