@@ -2,7 +2,7 @@ package Unit5.c2.q4;
 
 import java.util.Scanner;
 
-public class BankNotePress {
+public class BNP {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int paisa = sc.nextInt();
@@ -51,4 +51,4 @@ class large implements Paper {
         return "s3";
     }
 }
-enum Country {s1,s2,s3};
+
